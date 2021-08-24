@@ -1,5 +1,5 @@
 const path = require("path");
-const htmlWebpackPulgin = require("html-webpack-plugin");
+const htmlWebpackPlugin = require("html-webpack-plugin");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 const isDevelopment = process.env.NODE_ENV !== "production";
@@ -26,7 +26,7 @@ module.exports = {
       new ReactRefreshWebpackPlugin({
         overlay: false,
       }),
-    new htmlWebpackPulgin({
+    new htmlWebpackPlugin({
       template: path.resolve(__dirname, "public", "index.html"),
     }),
   ].filter(Boolean),
